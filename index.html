@@ -254,6 +254,7 @@
   <script>
     $("#submit-form").submit((e)=>{
         e.preventDefault()
+        if(nameValid()&&PhoneValid()&&emailValid()&&MessageValid()){
         $.ajax({
             url:"https://script.google.com/macros/s/AKfycbw7IEUmR2tETiP4I4qS783Bhun0jZl-M4Qy4SpWW3siSKir4krEjrGu5BntH9-QN69G/exec",
             data:$("#submit-form").serialize(),
@@ -268,7 +269,12 @@
 
             }
         })
+      }
+  else{
+    alert("Fill correctly")
+  }
     })
+  
 </script>
 </body>
 
