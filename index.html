@@ -28,7 +28,7 @@
 <header class="bg-secondary fixed-top" >
 
   <div >
-      <nav class="navbar navbar-expand-lg navbar-light">
+       <nav class="navbar navbar-expand-lg navbar-light"> 
         <a class="navbar-brand" href="#">Anandhu salin<span class="d-none d-lg-block" style="padding-left: 70vw;"></span></a>
         <button class="navbar-toggler"  type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent">
@@ -185,24 +185,24 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label>Name</label>
-          <input type="text" required onkeyup="nameValid()" class="form-control" id="nameText" name="name" placeholder="Name">
+          <input type="text" onkeyup="nameValid()" class="form-control" id="nameText" name="name" placeholder="Name">
           <p class="valid " bg.danger id="nameSpan" style="color: #a52a2a;"></p>
         </div>
         <div class="form-group col-md-6">
           <label>Phone number</label>
-          <input type="text" required onkeyup="PhoneValid()" maxlength="10" minlength="10" class="form-control"
+          <input type="text"  onkeyup="PhoneValid()" maxlength="10" minlength="10" class="form-control"
             id="phoneText" name="phonenumber" placeholder="Phone number">
           <p style="color: #a52a2a;" id="phoneSpan"></p>
         </div>
         <div class="form-group col-md-12">
           <label>email</label>
-          <input type="text" required onkeyup="emailValid()" class="form-control" id="emailText" name="emailid" placeholder="email">
+          <input type="text"  onkeyup="emailValid()" class="form-control" id="emailText" name="emailid" placeholder="email">
           <p style="color: #a52a2a;" id="emailSpan"></p>
 
           <div class="form group">
 
             <label>message</label>
-            <textarea class="form-control" required onkeyup="MessageValid()" id="messageText" name="message" cols="30"
+            <textarea class="form-control"  onkeyup="MessageValid()" id="messageText" name="message" cols="30"
               rows="10"></textarea>
             <p style="color: #a52a2a;" id="messageSpan"></p>
 
@@ -251,6 +251,7 @@
   <script>
     $("#submit-form").submit((e)=>{
         e.preventDefault()
+
         if(nameValid()&&PhoneValid()&&emailValid()&&MessageValid()){
         $.ajax({
             url:"https://script.google.com/macros/s/AKfycbw7IEUmR2tETiP4I4qS783Bhun0jZl-M4Qy4SpWW3siSKir4krEjrGu5BntH9-QN69G/exec",
