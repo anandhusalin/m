@@ -17,14 +17,50 @@ function nameValid(){
 function PhoneValid(){
     var phone=document.getElementById("phoneText").value 
     var phoneSpan=document.getElementById("phoneSpan");
-    var letters= /^\d{10}$/;
+    var letters= /^\d+$/;
+    
     if(phone==""){
         phoneSpan.innerHTML="Filed is required"
         return false;}
-    else if(phone.match(letters)){
+    else if(phone.match(letters)&& (phone.length==10)){
         phoneSpan.innerHTML="";
         return true;
     }
+    else if(phone.length<10)
+        {
+            if(phone.match(letters))
+            {
+                phoneSpan.innerHTML="enter the 10 numbers";
+                return false;
+
+            }
+            else
+            {
+                phoneSpan.innerHTML="use numbers";
+                return false;
+            }
+
+            
+        }
+    else if(phone.length>10)
+    {
+        if(phone.match(letters))
+        {
+            phoneSpan.innerHTML="please enter 10 numbers";
+            return false;
+        }
+        else
+        {
+            phoneSpan.innerHTML="use numbers";
+            return false;
+        }
+    
+        
+    }
+    
+    
+    
+
     else{
         phoneSpan.innerHTML="invalid number";
         return false;
