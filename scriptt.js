@@ -1,3 +1,7 @@
+
+
+
+
 function nameValid(){
     var name=document.getElementById("nameText").value 
     var nameSpan=document.getElementById("nameSpan");
@@ -102,3 +106,9 @@ function MessageValid(){
     }
  
 }
+// $('.navbar-collapse').click(function(){
+//     $(".navbar-collapse").hide('hide');
+// });
+// $('.navbar-toggler').click(function(){
+//     $(".navbar-collapse").show('hide');
+// });
